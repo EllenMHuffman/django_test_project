@@ -5,7 +5,15 @@
 </head>
 <body>
   <div>
-    <h3>Sample content goes here</h3>
+    <h1>Latest Blog Entries</h1>
+    {% for post in posts %}
+      <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href=''>{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+        <br/>
+      </div>
+    {% endfor %}
   </div>
 </body>
 </html>
